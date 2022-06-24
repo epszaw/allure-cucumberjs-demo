@@ -46,13 +46,13 @@ module.exports = class extends CucumberJSAllureFormatter {
 1. Clone the repository
 2. Install dependencies:
 ```shell
-npm i 			# for npm users
-yarn 				# for yarn users
+npm i  # for npm users
+yarn   # for yarn users
 ```
 3. Run the tests script:
 ```shell
-npm t 			# for npm users
-yarn test   # for yarn users
+npm t      # for npm users
+yarn test  # for yarn users
 ```
 4. Check the result in `allure-results` directory
 5. Upload your results right to the `Launches`
