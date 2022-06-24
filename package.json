@@ -1,0 +1,15 @@
+{
+  "name": "allure-js-cucumber-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "cucumber-js -f ./reporter.js"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^8.3.1",
+    "allure-cucumberjs": "^2.0.0-beta.18",
+    "allure-js-commons": "^2.0.0-beta.18",
+    "chai": "^4.3.6"
+  }
+}
