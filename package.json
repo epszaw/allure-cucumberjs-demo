@@ -4,12 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "cucumber-js -f ./reporter.js"
+    "test": "rimraf ./allure-results && cucumber-js --config ./configs/plain.js",
+    "test:allure": "rimraf ./allure-results && ALLURE_TESTPLAN_PATH=./testplan.json cucumber-js --config ./configs/allure.js"
   },
   "devDependencies": {
-    "@cucumber/cucumber": "^8.3.1",
+    "@cucumber/cucumber": "^8.4.0",
     "allure-cucumberjs": "^2.0.0-beta.18",
     "allure-js-commons": "^2.0.0-beta.18",
-    "chai": "^4.3.6"
+    "chai": "^4.3.6",
+    "rimraf": "^3.0.2"
   }
 }

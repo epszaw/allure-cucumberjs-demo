@@ -31,3 +31,4 @@ Feature: awesome calc function
 			| 8  | 2 | 4      |
 			| 9  | 3 | 3      |
 			| 27 | 3 | 9      |
+		
