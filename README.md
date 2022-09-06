@@ -1,8 +1,8 @@
 # Allure CucumberJS integration
 
-This example demonstrates how to works `allure-cucumberjs` integration.
+This example demonstrates how works `allure-cucumberjs` integration.
 
-## installation
+## Installation
 
 1. Create a `cucumberjs` reporter using `allure-js-common` and `allure-cucumberjs` packages:
 ```js

@@ -1,15 +1,14 @@
-const path = require('path')
-const { AllureRuntime } = require('allure-js-commons')
-const { CucumberJSAllureFormatter } = require('allure-cucumberjs')
+const { CucumberJSAllureFormatter, AllureRuntime } = require("allure-cucumberjs");
+const path = require("path");
 
-module.exports = class extends CucumberJSAllureFormatter {
+class Reporter extends CucumberJSAllureFormatter {
 	constructor(options) {
-    super(
-      options,
-      new AllureRuntime({ 
-				resultsDir: path.resolve(__dirname, "../allure-results"), 
-			}),
-			{},
-    );
-  }
+		super(
+			options,
+			new AllureRuntime({ resultsDir: path.resolve(__dirname, "../allure-results") }),
+			{}
+		);
+	}
 }
+
+module.exports = Reporter;

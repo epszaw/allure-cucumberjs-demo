@@ -4,14 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "rimraf ./allure-results && cucumber-js --config ./configs/plain.js",
-    "test:allure": "rimraf ./allure-results && ALLURE_TESTPLAN_PATH=./testplan.json cucumber-js --config ./configs/allure.js"
+		"test": "cucumber-js --format progress --parallel 4",
+		"test:s": "rimraf ./allure-results && cucumber-js --config configs/singleThread.js",
+    "test:p": "rimraf ./allure-results && PARALLEL=true cucumber-js --config configs/parallel.js"
   },
   "devDependencies": {
-    "@cucumber/cucumber": "^8.4.0",
+    "@cucumber/cucumber": "^8.5.1",
     "allure-cucumberjs": "^2.0.0-beta.18",
     "allure-js-commons": "^2.0.0-beta.18",
     "chai": "^4.3.6",
+    "playwright": "^1.25.1",
     "rimraf": "^3.0.2"
   }
 }
