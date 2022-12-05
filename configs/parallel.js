@@ -1,6 +1,4 @@
-const path = require('path')
-// TODO:
-// const { createTestplanFilter } = require('allure-cucumberjs')
+const path = require('path');
 
 module.exports = {
 	default: {
