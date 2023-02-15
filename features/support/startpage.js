@@ -1,4 +1,4 @@
-const { Given, When, Then, AfterAll, setWorldConstructor } = require('@cucumber/cucumber')
+const { Given, When, Then, setWorldConstructor } = require('@cucumber/cucumber')
 const { CucumberAllureWorld } = require("allure-cucumberjs")
 const { chromium } = require('playwright')
 const { expect } = require('chai')
@@ -58,5 +58,16 @@ Then(`search results have been displayed`, async function() {
 
 	this.attach(screenshot, 'image/png')
 
+	await this.step("additional first step", async (s1) => {
+		s1.attach(JSON.stringify({ bar: 'baz' }), 'application/json')
+
+		await s1.step("additional second step", async (s2) => {
+			s2.attach(JSON.stringify({ bar: 'baz' }), 'application/json')
+
+			await s2.step("additional third step", async (s3) => {
+				s3.attach(JSON.stringify({ bar: 'baz' }), 'application/json')
+			})
+		})
+	})
 	await this.page.close()
 })
